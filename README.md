@@ -1,3 +1,3 @@
 # Aprendendo-java
 
-Comentários/ Tipos primitivos/ Atalhos/Estruras Condicionais/ Operadores Lógicos
+Comentários/ Tipos primitivos/ Atalhos/Estruras Condicionais/ Operadores Lógicos/ Exercícios.
