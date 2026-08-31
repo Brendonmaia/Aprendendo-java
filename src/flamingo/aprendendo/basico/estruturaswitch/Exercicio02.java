@@ -4,42 +4,54 @@ import java.util.Scanner;
 
 public class Exercicio02 {
     public static void main(String[] args) {
-        int opcaoLanche;
-        int quantidade;
         Scanner sc = new Scanner(System.in);
 
-        System.out.printf("""
-        Escolha as opções de lanche!
-        1) Hambúrguer
-        2) Pizza
-        3) Batata Frita
-        4)
-        """);
+        int opcaoLanche;
+        int quantidade;
+        double total;
+
+        System.out.println("1 → Hambúrguer   — R$ 25,00");
+        System.out.println("2 → Pizza        — R$ 40,00");
+        System.out.println("3 → Batata frita — R$ 18,00");
+        System.out.println("4 → Refrigerante — R$ 8,00");
+        System.out.println("5 → Suco         — R$ 10,00");
+        System.out.print("Escolha a opção: ");
 
         opcaoLanche = sc.nextInt();
 
-        // Correção principal: passar a variável no switch
         switch (opcaoLanche) {
             case 1:
-                System.out.println("Quantos litros de gasolina você deseja?");
-                litros = sc.nextDouble();
-                preco = litros * 5.89;
-                System.out.printf("Preço total do combustivel é R$ %.2f%n", preco);
+                System.out.print("Digite a quantidade: ");
+                quantidade = sc.nextInt();
+                total = quantidade * 25.00;
+                System.out.println("Item escolhido: Hambúrguer Quantidade: " + quantidade + " Total do pedido: R$ " + total);
                 break;
             case 2:
-                System.out.println("Quantos litros de etanol você deseja?");
-                litros = sc.nextDouble();
-                preco = litros * 3.99;
-                System.out.printf("Preço total do combustivel é R$ %.2f%n", preco);
+                System.out.print("Digite a quantidade: ");
+                quantidade = sc.nextInt();
+                total = quantidade * 40.00;
+                System.out.println("Item escolhido: Pizza Quantidade: " + quantidade + " Total do pedido: R$ " + total);
                 break;
             case 3:
-                System.out.println("Quantos litros de diesel você deseja?");
-                litros = sc.nextDouble();
-                preco = litros * 6.19;
-                System.out.printf("Preço total do combustivel é R$ %.2f%n", preco);
+                System.out.print("Digite a quantidade: ");
+                quantidade = sc.nextInt();
+                total = quantidade * 18.00;
+                System.out.println("Item escolhido: Batata frita Quantidade: " + quantidade + " Total do pedido: R$ " + total);
+                break;
+            case 4:
+                System.out.print("Digite a quantidade: ");
+                quantidade = sc.nextInt();
+                total = quantidade * 8.00;
+                System.out.println("Item escolhido: Refrigerante Quantidade: " + quantidade + " Total do pedido: R$ " + total);
+                break;
+            case 5:
+                System.out.print("Digite a quantidade: ");
+                quantidade = sc.nextInt();
+                total = quantidade * 10.00;
+                System.out.println("Item escolhido: Suco Quantidade: " + quantidade + " Total do pedido: R$ " + total);
                 break;
             default:
-                System.out.println("Não existe essa opção!");
+                System.out.println("Opção inválida");
                 break;
         }
 
